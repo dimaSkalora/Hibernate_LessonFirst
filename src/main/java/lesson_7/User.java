@@ -1,8 +1,7 @@
-package mapping_annotation;
+package lesson_7;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Set;
 
 @Entity
 @Table(name="user")

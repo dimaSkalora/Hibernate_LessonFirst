@@ -1,4 +1,4 @@
-package mapping_annotation;
+package lesson_7;
 
 import org.hibernate.SessionFactory;
 

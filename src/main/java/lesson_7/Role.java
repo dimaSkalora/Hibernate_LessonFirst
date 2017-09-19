@@ -1,4 +1,4 @@
-package mapping_annotation;
+package lesson_7;
 
 import javax.persistence.*;
 import java.util.HashSet;
