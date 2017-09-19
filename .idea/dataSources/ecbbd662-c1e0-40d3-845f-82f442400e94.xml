@@ -940,66 +940,71 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="240" parent="6" name="role">
+    <table id="240" parent="6" name="hibernate_sequence">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="241" parent="6" name="user">
+    <table id="241" parent="6" name="role">
       <Engine>InnoDB</Engine>
     </table>
-    <column id="242" parent="240" name="id">
+    <table id="242" parent="6" name="user">
+      <Engine>InnoDB</Engine>
+    </table>
+    <column id="243" parent="240" name="next_val">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="244" parent="241" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0</DataType>
       <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="243" parent="240" name="title">
+    <column id="245" parent="241" name="title">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="244" parent="240" name="PRIMARY">
+    <key id="246" parent="241" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="245" parent="241" name="id">
+    <column id="247" parent="242" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0</DataType>
       <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="246" parent="241" name="first_name">
+    <column id="248" parent="242" name="age">
       <Position>2</Position>
-      <DataType>varchar(255)|0</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="247" parent="241" name="last_name">
-      <Position>3</Position>
-      <DataType>varchar(255)|0</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="248" parent="241" name="age">
-      <Position>4</Position>
       <DataType>int(11)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="249" parent="241" name="role_id">
-      <Position>5</Position>
-      <DataType>bigint(20)|0</DataType>
-      <NotNull>1</NotNull>
+    <column id="249" parent="242" name="firstname">
+      <Position>3</Position>
+      <DataType>varchar(50)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="250" parent="241" name="FKn82ha3ccdebhokx3a8fgdqeyy">
+    <column id="250" parent="242" name="lastname">
+      <Position>4</Position>
+      <DataType>varchar(50)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="251" parent="242" name="role_id">
+      <Position>5</Position>
+      <DataType>bigint(20)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="252" parent="242" name="FKn82ha3ccdebhokx3a8fgdqeyy">
       <ColNames>role_id</ColNames>
     </index>
-    <key id="251" parent="241" name="PRIMARY">
+    <key id="253" parent="242" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="252" parent="241" name="FKn82ha3ccdebhokx3a8fgdqeyy">
+    <foreign-key id="254" parent="242" name="FKn82ha3ccdebhokx3a8fgdqeyy">
       <ColNames>role_id</ColNames>
       <RefSchemaName>java_spring_hibernate</RefSchemaName>
       <RefTableName>role</RefTableName>

@@ -1,6 +1,8 @@
 package mapping_annotation;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 
 @Entity
@@ -12,6 +14,9 @@ public class Role {
     private Long id;
     @Column(name = "title")
     private String title;
+
+    @OneToMany(mappedBy="role")
+    private Set<User> users = new HashSet<User>();
 
     public Role() {
     }
@@ -30,5 +35,13 @@ public class Role {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public Set<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(Set<User> users) {
+        this.users = users;
     }
 }

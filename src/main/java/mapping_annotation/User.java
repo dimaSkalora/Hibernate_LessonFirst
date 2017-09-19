@@ -20,6 +20,10 @@ public class User implements Serializable{
     @Column(name = "lastname", length = 50)
     private String lastname;
 
+    @ManyToOne
+    @JoinColumn(name="role_id")
+    private Role role;
+
     public User(){
 
     }
@@ -60,4 +64,11 @@ public class User implements Serializable{
         this.lastname = lastname;
     }
 
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
 }
