@@ -1,17 +1,15 @@
-package mapping_xml;
+package lesson_4;
 
 import java.io.Serializable;
-import java.util.Set;
 
 public class User implements Serializable{
     private static final long serialVersionUID = -5845118151518L;
-
     private long id;
     private int age;
     private String firstname;
     private String lastname;
 
-    private Set<Role> roles;
+    private Role role;
 
     public User(){
 
@@ -53,11 +51,11 @@ public class User implements Serializable{
         this.lastname = lastname;
     }
 
-    public Set<Role> getRoles() {
-        return roles;
+    public Role getRole() {
+        return role;
     }
 
-    public void setRoles(Set<Role> roles) {
-        this.roles = roles;
+    public void setRole(Role role) {
+        this.role = role;
     }
 }

@@ -1,13 +1,10 @@
-package mapping_xml;
-
-import java.util.HashSet;
-import java.util.Set;
+package lesson_4;
 
 public class Role {
     private Long id;
     private String title;
 
-    private Set<User> users = new HashSet<User>();
+    private User user;
 
     public Role() {
     }
@@ -28,11 +25,4 @@ public class Role {
         this.title = title;
     }
 
-    public Set<User> getUsers() {
-        return users;
-    }
-
-    public void setUsers(Set<User> users) {
-        this.users = users;
-    }
 }

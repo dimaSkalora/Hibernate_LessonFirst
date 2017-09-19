@@ -1,4 +1,4 @@
-package mapping_xml;
+package lesson_4;
 
 import org.hibernate.SessionFactory;
 
