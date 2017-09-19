@@ -11,6 +11,7 @@
         <property name="show_sql">true</property>
         <property name="hbm2ddl.auto">create</property>
 
-        <mapping resource="lesson_2/user.cfg.xml"/>
+        <mapping resource="lesson_3/user.cfg.xml"/>
+        <mapping resource="lesson_3/role.cfg.xml"/>
     </session-factory>
 </hibernate-configuration>
