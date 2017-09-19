@@ -11,7 +11,5 @@
         <property name="show_sql">true</property>
         <property name="hbm2ddl.auto">create</property>
 
-        <mapping class="mapping_annotation.User"/>
-        <mapping class="mapping_annotation.Role"/>
     </session-factory>
 </hibernate-configuration>
