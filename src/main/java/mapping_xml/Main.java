@@ -1,3 +1,5 @@
+package mapping_xml;
+
 import org.hibernate.SessionFactory;
 
 public class Main {

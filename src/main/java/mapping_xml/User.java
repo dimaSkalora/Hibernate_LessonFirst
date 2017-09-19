@@ -1,3 +1,5 @@
+package mapping_xml;
+
 import java.io.Serializable;
 import java.util.Set;
 

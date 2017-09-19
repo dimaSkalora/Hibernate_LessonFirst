@@ -1,11 +1,17 @@
-import java.util.HashSet;
-import java.util.Set;
+package mapping_annotation;
 
+import javax.persistence.*;
+
+
+@Entity
+@Table(name="role")
 public class Role {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
     private Long id;
+    @Column(name = "title")
     private String title;
-
-    private Set<User> users = new HashSet<User>();
 
     public Role() {
     }
@@ -24,13 +30,5 @@ public class Role {
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public Set<User> getUsers() {
-        return users;
-    }
-
-    public void setUsers(Set<User> users) {
-        this.users = users;
     }
 }
