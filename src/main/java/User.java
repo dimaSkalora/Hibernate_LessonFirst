@@ -1,4 +1,5 @@
 import java.io.Serializable;
+import java.util.Set;
 
 public class User implements Serializable{
     private static final long serialVersionUID = -5845118151518L;
@@ -8,7 +9,7 @@ public class User implements Serializable{
     private String firstname;
     private String lastname;
 
-    private Role role;
+    private Set<Role> roles;
 
     public User(){
 
@@ -50,11 +51,11 @@ public class User implements Serializable{
         this.lastname = lastname;
     }
 
-    public Role getRole() {
-        return role;
+    public Set<Role> getRoles() {
+        return roles;
     }
 
-    public void setRole(Role role) {
-        this.role = role;
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
     }
 }

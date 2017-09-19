@@ -10,7 +10,10 @@
         <property name="lastname" column="last_name" type="string"/>
         <property name="age" column="age" type="int"/>
 
-        <one-to-one name="role" class="Role"/>
+        <set name="roles" table="user_role">
+            <key column="user_id"/>
+            <many-to-many column="role_id" class="Role"/>
+        </set>
 
     </class>
 </hibernate-mapping>

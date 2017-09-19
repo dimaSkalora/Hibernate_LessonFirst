@@ -8,6 +8,9 @@
         </id>
         <property name="title" column="title" type="string"/>
 
-        <one-to-one name="user" class="User"/>
+        <set name="users" table="user_role">
+            <key column="role_id"/>
+            <many-to-many column="user_id" class="User"/>
+        </set>
     </class>
 </hibernate-mapping>
