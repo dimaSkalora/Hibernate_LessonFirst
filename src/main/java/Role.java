@@ -4,7 +4,7 @@ public class Role {
     private Long id;
     private String title;
 
-    private Set<User> users;
+    private User user;
 
     public Role() {
     }
@@ -25,11 +25,11 @@ public class Role {
         this.title = title;
     }
 
-    public Set<User> getUsers() {
-        return users;
+    public User getUser() {
+        return user;
     }
 
-    public void setUsers(Set<User> users) {
-        this.users = users;
+    public void setUser(User user) {
+        this.user = user;
     }
 }
