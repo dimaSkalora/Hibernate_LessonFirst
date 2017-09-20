@@ -988,27 +988,13 @@
     </column>
     <column id="250" parent="242" name="lastname">
       <Position>4</Position>
-      <DataType>varchar(50)|0</DataType>
+      <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="251" parent="242" name="role_id">
-      <Position>5</Position>
-      <DataType>bigint(20)|0</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="252" parent="242" name="FKn82ha3ccdebhokx3a8fgdqeyy">
-      <ColNames>role_id</ColNames>
-    </index>
-    <key id="253" parent="242" name="PRIMARY">
+    <key id="251" parent="242" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="254" parent="242" name="FKn82ha3ccdebhokx3a8fgdqeyy">
-      <ColNames>role_id</ColNames>
-      <RefSchemaName>java_spring_hibernate</RefSchemaName>
-      <RefTableName>role</RefTableName>
-      <RefColNames>id</RefColNames>
-    </foreign-key>
   </database-model>
 </dataSource>
