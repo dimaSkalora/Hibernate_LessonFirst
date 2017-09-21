@@ -943,58 +943,170 @@
     <table id="240" parent="6" name="hibernate_sequence">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="241" parent="6" name="role">
+    <table id="241" parent="6" name="product">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="242" parent="6" name="user">
+    <table id="242" parent="6" name="product_category">
       <Engine>InnoDB</Engine>
     </table>
-    <column id="243" parent="240" name="next_val">
+    <table id="243" parent="6" name="role">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="244" parent="6" name="user">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="245" parent="6" name="user_role">
+      <Engine>InnoDB</Engine>
+    </table>
+    <column id="246" parent="240" name="next_val">
       <Position>1</Position>
       <DataType>bigint(20)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="244" parent="241" name="id">
+    <column id="247" parent="241" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="245" parent="241" name="title">
+    <column id="248" parent="241" name="description">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="246" parent="241" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="247" parent="242" name="id">
-      <Position>1</Position>
-      <DataType>bigint(20)|0</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="248" parent="242" name="age">
-      <Position>2</Position>
-      <DataType>int(11)|0</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="249" parent="242" name="firstname">
+    <column id="249" parent="241" name="price">
       <Position>3</Position>
-      <DataType>varchar(50)|0</DataType>
+      <DataType>decimal(19,2)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="250" parent="242" name="lastname">
+    <column id="250" parent="241" name="title">
       <Position>4</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="251" parent="242" name="PRIMARY">
+    <column id="251" parent="241" name="product_category_id">
+      <Position>5</Position>
+      <DataType>bigint(20)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="252" parent="241" name="FKcwclrqu392y86y0pmyrsi649r">
+      <ColNames>product_category_id</ColNames>
+    </index>
+    <key id="253" parent="241" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+    <foreign-key id="254" parent="241" name="FKcwclrqu392y86y0pmyrsi649r">
+      <ColNames>product_category_id</ColNames>
+      <RefSchemaName>java_spring_hibernate</RefSchemaName>
+      <RefTableName>product_category</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="255" parent="242" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="256" parent="242" name="title">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="257" parent="242" name="parent_product_category">
+      <Position>3</Position>
+      <DataType>bigint(20)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="258" parent="242" name="FKa9cvej2fucrbswcc5iwckn9x3">
+      <ColNames>parent_product_category</ColNames>
+    </index>
+    <key id="259" parent="242" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="260" parent="242" name="FKa9cvej2fucrbswcc5iwckn9x3">
+      <ColNames>parent_product_category</ColNames>
+      <RefSchemaName>java_spring_hibernate</RefSchemaName>
+      <RefTableName>product_category</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="261" parent="243" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="262" parent="243" name="title">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="263" parent="243" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="264" parent="244" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="265" parent="244" name="age">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="266" parent="244" name="firstname">
+      <Position>3</Position>
+      <DataType>varchar(50)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="267" parent="244" name="lastname">
+      <Position>4</Position>
+      <DataType>varchar(50)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="268" parent="244" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="269" parent="245" name="user_id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="270" parent="245" name="role_id">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="271" parent="245" name="FKa68196081fvovjhkek5m97n3y">
+      <ColNames>role_id</ColNames>
+    </index>
+    <key id="272" parent="245" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>user_id
+role_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="273" parent="245" name="FK859n2jvi8ivhui0rl0esws6o">
+      <ColNames>user_id</ColNames>
+      <RefSchemaName>java_spring_hibernate</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="274" parent="245" name="FKa68196081fvovjhkek5m97n3y">
+      <ColNames>role_id</ColNames>
+      <RefSchemaName>java_spring_hibernate</RefSchemaName>
+      <RefTableName>role</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
   </database-model>
 </dataSource>
