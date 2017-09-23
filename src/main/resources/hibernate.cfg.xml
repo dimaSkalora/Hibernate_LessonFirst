@@ -9,10 +9,13 @@
         <property name="connection.password">root</property>
         <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
         <property name="show_sql">true</property>
-        <property name="hbm2ddl.auto">create</property>
+        <property name="hbm2ddl.auto">update</property>
 
-        <mapping class="lesson_6.User"/>
-        <mapping class="lesson_6.Role"/>
+        <mapping class="lesson_15.models.User"/>
+        <mapping class="lesson_15.models.Role"/>
+        <mapping class="lesson_15.models.Product"/>
+        <mapping class="lesson_15.models.ProductCategory"/>
+        <mapping class="lesson_15.models.Order"/>
 
         <!--xml
         <mapping resource="lesson_5/user.cfg.xml"/>
